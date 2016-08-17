@@ -33,7 +33,7 @@ class NotesController extends Controller {
             where: {
                 id: req.params.id
             }
-        }));
+        }).then(() => ({id: req.params.id})));
     }
 }
 
